@@ -1,0 +1,135 @@
+.hero {
+  position: relative;
+
+  .bg-image {
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+}
+
+.fullwidth-block {
+  padding-block: 3rem;
+
+  header {
+    margin-bottom: 2rem;
+
+    .section-title {
+      display: inline-block;
+      text-transform: uppercase;
+      color: $primary-color;
+      font-size: 2rem;
+      @media (max-width: 575px) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+.project-info {
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 1rem;
+  }
+
+  a {
+    display: inline-block;
+    margin-block: 10px;
+    color: #225eac;
+    text-decoration: underline;
+  }
+
+  ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin-top: 1rem;
+  }
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+
+  @media (max-width: 575px) {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .block {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    margin: 0;
+    border-radius: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(#313131, 0.3);
+      pointer-events: none;
+      transition: 0.6s;
+    }
+
+    &:hover::after {
+      opacity: 0;
+    }
+
+    &__img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: auto;
+      object-fit: contain;
+    }
+  }
+}
+
+.media-holder {
+  position: relative;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  height: 350px;
+  // padding-top: 350px;
+  overflow: hidden;
+
+  iframe {
+    position: absolute !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    right: 0;
+    left: 0;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    border: 0 !important;
+  }
+}
+
+.contact-form {
+  background-color: #636363;
+  .contact-img {
+    width: 100%;
+
+    img {
+      display: block;
+      width: 400px;
+      max-width: 100%;
+      margin: auto;
+    }
+  }
+
+  .request-form {
+    background-color: lighten($secondary-color, 25%);
+    padding: 2rem;
+  }
+}

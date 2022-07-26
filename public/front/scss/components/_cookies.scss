@@ -1,0 +1,47 @@
+@use "../abstracts" as *;
+
+.cookie-banner {
+  position: fixed;
+  z-index: 30;
+  bottom: -100%;
+  inset-inline-start: 0;
+  visibility: hidden;
+  opacity: 0;
+  width: min(100%, 400px);
+  padding: 1rem 0;
+  background-color: var(--accent-clr-400);
+  box-shadow: 0 0 30px rgba(#000, 0.2);
+  transition: 0.5s;
+
+  &.active {
+    bottom: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  p {
+    color: #fff;
+    font-size: 0.9rem;
+
+    a {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  }
+
+  button.cookie-btn {
+    background-color: #fff;
+    font-weight: 600;
+    padding: 5px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: var(--radius);
+    outline: none;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: #ececec;
+      }
+    }
+  }
+}

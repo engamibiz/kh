@@ -1,0 +1,130 @@
+@use "../abstracts" as *;
+
+.view-blog-page {
+  .blog {
+    &__image {
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+
+    &__details {
+      position: relative;
+      z-index: 5;
+      padding: 1rem;
+
+      @include breakpoint(min, 768px) {
+        width: 95%;
+        margin: auto;
+        padding: 2rem;
+        transform: translateY(-5%);
+        background-color: #fff;
+        box-shadow: var(--shadow);
+      }
+
+      h6.blog-title {
+        margin-bottom: 0.5rem;
+      }
+
+      p.blog-info {
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--border-clr);
+        color: var(--gray-clr-400);
+
+        & > span {
+          font-size: 0.85rem;
+
+          i {
+            display: inline-block;
+            margin-inline-end: 3px;
+          }
+        }
+      }
+
+      a:not(.share-link) {
+        color: var(--blue-clr-100);
+        text-decoration: underline;
+      }
+
+      ul,
+      ol {
+        margin-block: 1rem;
+
+        li {
+          line-height: 2;
+          list-style-type: disc;
+          list-style-position: inside;
+        }
+      }
+
+      img,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin-bottom: 1rem;
+      }
+
+      iframe {
+        width: 100% !important;
+        height: 350px !important;
+        border: 0 !important;
+        margin-block: 1rem;
+        object-fit: content !important;
+      }
+
+      p {
+        line-height: 1.7;
+        font-weight: 300;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  aside.sidebar {
+    padding: 1rem;
+    background-color: #fff;
+
+    .widget {
+      background-color: var(--gray-clr-50);
+      padding: 1rem;
+
+      &__title {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border-clr);
+      }
+
+      &__list {
+        li:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+
+        a {
+          display: flex;
+          gap: 10px;
+          font-size: 0.85rem;
+          text-transform: capitalize;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        img {
+          flex-shrink: 0;
+          display: inline-block;
+          width: 50px;
+          height: 50px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

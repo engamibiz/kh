@@ -1,0 +1,102 @@
+.site-footer {
+  background-color: lighten($secondary-color, 25%);
+
+  .widget {
+    @include flex(flex, row, nowrap, center, center, 0);
+    height: 100%;
+    padding: 2rem 1rem;
+
+    @media (min-width: 992px) {
+      padding: 3rem;
+    }
+
+    &.logo-widget {
+      background-color: darken($secondary-color, 45%);
+      color: #fff;
+
+      .footer-logo {
+        width: 220px;
+
+        img {
+          width: 100%;
+        }
+      }
+      .social-list {
+        color: darken($secondary-color, 45%);
+      }
+    }
+
+    &.contact-widget {
+      background-color: darken($secondary-color, 40%);
+      color: #fff;
+      li {
+        line-height: 2;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+        a {
+          display: block;
+
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+
+    &.about-widget {
+      background-color: lighten($secondary-color, 10%);
+    }
+
+    &.back-top-widget {
+      background-color: lighten($secondary-color, 25%);
+
+      button#goTop {
+        background-color: transparent;
+        border: none;
+        outline: none;
+
+        .arrow {
+          @include flex(flex, row, nowrap, center, center, 0);
+          width: 50px;
+          height: 50px;
+          margin: auto;
+          border-radius: 50%;
+          border: 2px solid currentColor;
+
+          svg {
+            flex-shrink: 0;
+          }
+        }
+
+        span {
+          display: block;
+
+          &.text {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .widget-title {
+    font-weight: 200;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
+
+  .Copyright {
+    background-color: lighten($secondary-color, 35%);
+    text-align: center;
+
+    p {
+      padding: 1rem;
+      font-weight: 300;
+
+      a {
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+    }
+  }
+}

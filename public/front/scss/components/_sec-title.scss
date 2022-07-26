@@ -1,0 +1,30 @@
+@use "../abstracts" as *;
+
+.section-title {
+  position: relative;
+  z-index: 2;
+
+  .title {
+    position: relative;
+    font-family: var(--title-font);
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+    [dir="rtl"] & {
+      letter-spacing: normal;
+    }
+
+    &:before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      width: 50px;
+      height: 2px;
+      background-color: var(--blue-clr-400);
+      margin-inline-end: 10px;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+header.main-header ------- 20
+.cookie-banner ----------- 30
+.go-top-btn -------------- 15
+.show-contact-us --------- 10
+.contact__holder --------- 25
+.show-contact-us --------- 5
+.icons-holder ------------ 5

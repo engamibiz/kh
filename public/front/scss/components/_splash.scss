@@ -1,0 +1,42 @@
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 30;
+  background: #202020;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg#kh-logo {
+    display: block;
+    width: min(500px, 90%);
+    margin: auto;
+
+    #silver-shape {
+      opacity: 0;
+      transform: translateY(-2rem);
+    }
+
+    #tower {
+      opacity: 0;
+      transform: translateY(4rem);
+    }
+
+    #gold-shape-1 {
+      opacity: 0;
+      transform: translateX(1rem);
+    }
+
+    #gold-shape-2 {
+      opacity: 0;
+      transform: translateX(-1rem);
+    }
+
+    #logo-txt {
+      clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+      transform: translateX(3rem);
+    }
+  }
+}

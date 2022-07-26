@@ -1,0 +1,70 @@
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-image: linear-gradient(
+    rgba(#000, 0.7),
+    rgba(#000, 0.4),
+    transparent
+  );
+
+  .flex-container {
+    @include flex(flex, row, nowrap, space-between, center, 10px);
+
+    .social-list {
+      @media (max-width: 991.98px) {
+        display: none;
+      }
+    }
+
+    .contact-info {
+      color: darken($secondary-color, 25%);
+
+      @media (max-width: 991.98px) {
+        display: none;
+      }
+
+      li {
+        display: inline-block;
+
+        a {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          line-height: 1;
+          margin-inline: 1rem;
+          color: #fff;
+          &:hover {
+            color: lighten($primary-color, 20%);
+          }
+
+          svg {
+            display: block;
+            width: 25px;
+          }
+        }
+      }
+    }
+
+    .site-logo {
+      position: relative;
+      background-color: #333;
+      padding: 10px;
+      width: 170px;
+
+      @media (min-width: 992px) {
+        width: 200px;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        margin: auto;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+  }
+}

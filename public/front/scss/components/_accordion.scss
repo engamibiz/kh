@@ -1,0 +1,47 @@
+@use "../abstracts" as *;
+
+.accordion-holder {
+  margin-top: 2rem;
+
+  .block {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--blue-clr-400);
+    }
+
+    &__title {
+      button {
+        position: relative;
+        display: block;
+        width: 100%;
+        font-size: 1.2rem;
+        text-align: start;
+        text-transform: capitalize;
+        padding: 0.7rem 1rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        user-select: none;
+
+        & > svg {
+          position: absolute;
+          top: 15px;
+          inset-inline-end: 10px;
+          transition: transform 0.5s ease;
+        }
+
+        &[aria-expanded="true"] > svg {
+          transform: rotate(540deg);
+        }
+
+        @include breakpoint(max, 767px) {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    &__body {
+      padding: 1rem;
+    }
+  }
+}

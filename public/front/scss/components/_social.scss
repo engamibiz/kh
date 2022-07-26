@@ -1,0 +1,44 @@
+@use "../abstracts" as *;
+
+.contacts__social {
+  @include flex(row);
+  display: flex;
+  gap: 10px;
+
+  &--link {
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: inherit;
+    transition: transform 0.1s;
+
+    &.facebook {
+      color: #1877f2;
+    }
+    &.twitter {
+      color: #1da1f2;
+    }
+    &.instagram {
+      color: #c13584;
+    }
+    &.linkedin {
+      color: #0077b5;
+    }
+    &.youtube {
+      color: #ff0000;
+    }
+    &.telegram {
+      color: #0088cc;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        transform: scale(1.15);
+      }
+    }
+  }
+}

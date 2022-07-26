@@ -1,0 +1,34 @@
+@use "../abstracts" as *;
+
+.breadcrumb {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 2rem 0;
+  margin-bottom: 0;
+  align-items: center;
+
+  &-item {
+    text-transform: capitalize;
+    line-height: 1;
+    font-family: var(--title-font);
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--blue-clr-100);
+
+    & + .breadcrumb-item::before {
+      content: "\f054";
+      font-family: "Font Awesome 6 Free";
+      font-weight: bold;
+      color: #a7a7a7;
+      transform: scale(0.75);
+
+      [dir="rtl"] & {
+        content: "\f053";
+      }
+    }
+
+    &.active {
+      color: #a7a7a7;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+// vendors
+@use "./vendors/swiper-bundle";
+@use "./vendors/bootstrap-select";
+@use "./vendors/magnific-popup.min";
+@use "./vendors/intlTelInput";
+
+// BASE (global css rules)
+@use "./base/global";
+
+@use "./utilities";
+
+// COMPONENTS
+@use "./layout/header";
+@use "./components/splash";
+@use "./components/site-btn";
+@use "./components/cookies";
+@use "./components/go-top";
+@use "./components/floated-contacts";
+@use "./components/social";
+@use "./components/accordion";
+@use "./components/sec-title";
+@use "./components/contact-stuff";
+@use "./components/search";
+@use "./components/breadcrumb";
+@use "./components/pagination";
+@use "./components/project-card";
+@use "./components/dev-card";
+@use "./components/unit-card";
+@use "./components/blog-card";
+@use "./components/map";
+@use "./layout/footer";
+
+// PAGES
+@use "./pages/homepage";
+@use "./pages/view-page";
+@use "./pages/about";
+@use "./pages/privacy";
+@use "./pages/blog";
+@use "./pages/contact";
+@use "./pages/careers";

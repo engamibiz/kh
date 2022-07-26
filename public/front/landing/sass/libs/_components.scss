@@ -1,0 +1,268 @@
+.mfp-bottom-bar {
+  display: none;
+}
+
+.floated-btn {
+  position: fixed;
+  bottom: 5%;
+  right: 3%;
+  z-index: 10;
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-block: 10px;
+    background: linear-gradient(
+      180deg,
+      $primary-color,
+      lighten($primary-color, 20%)
+    );
+    box-shadow: 0 3px 25px rgba(#000, 0.15);
+    border-radius: 50%;
+    overflow: hidden;
+    &:hover {
+      background: $primary-color;
+      background: linear-gradient(
+        0deg,
+        $primary-color,
+        lighten($primary-color, 20%)
+      );
+    }
+
+    i {
+      display: block;
+      flex-shrink: 0;
+      font-size: 1.5rem;
+
+      &.fa-phone {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.iti__country-list {
+  width: 220px !important;
+  text-align: start !important;
+  right: auto !important;
+  left: 0 !important;
+}
+
+.iti__arrow {
+  margin: 0 !important;
+  margin-inline-start: 5px !important;
+}
+
+.iti__flag-box {
+  margin: 0 !important;
+  margin-inline-end: 5px !important;
+}
+
+.iti.iti--allow-dropdown {
+  width: 100%;
+}
+
+.button {
+  background: $primary-color;
+  background: linear-gradient(
+    180deg,
+    $primary-color,
+    lighten($primary-color, 20%)
+  );
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  font-weight: 700;
+
+  &:hover {
+    background: $primary-color;
+    background: linear-gradient(
+      0deg,
+      $primary-color,
+      lighten($primary-color, 20%)
+    );
+  }
+}
+
+.social-list {
+  @include flex(inline-flex, row, nowrap, flex-start, center, 10px);
+
+  a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 14px;
+    background-image: linear-gradient(
+      45deg,
+      $primary-color,
+      lighten($primary-color, 30%)
+    );
+
+    transition: 0.1s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.thank-holder {
+  .icon {
+    position: relative;
+    color: #28a745;
+    width: 70px;
+    height: 70px;
+    line-height: 50px;
+    margin: 0 auto 1rem;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70px;
+    }
+  }
+}
+
+section.projects {
+  overflow: hidden;
+  .slick-list {
+    margin: 0 -0.2rem;
+
+    .slick-slide {
+      margin: 0 0.2rem;
+    }
+  }
+
+  .controllers {
+    margin-top: 2rem;
+    @include flex(flex, row, nowrap, center, center, 10px);
+
+    button {
+      display: inline-block;
+      border: none;
+      color: darken($secondary-color, 20%);
+      background-color: transparent;
+      border-bottom: 2px solid darken($secondary-color, 20%);
+      padding: 0;
+      margin: 0 0.5rem;
+      font-weight: 700;
+    }
+  }
+
+  .project-card {
+    position: relative;
+
+    .img {
+      display: block;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1.1);
+        transition: transform 0.3s linear;
+      }
+    }
+
+    &:hover .img img {
+      transform: scale(1);
+    }
+
+    .tag {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 5;
+      background-color: $primary-color;
+      color: #fff;
+      padding: 0.3rem 1rem;
+
+      span {
+        display: block;
+        font-size: 0.9rem;
+        font-weight: lighter;
+        text-transform: uppercase;
+      }
+    }
+
+    .dev-logo {
+      position: absolute;
+      z-index: 5;
+      top: 1rem;
+      left: 1rem;
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        transform: scale(0.9);
+        transition: transform 0.3s linear;
+      }
+    }
+
+    &:hover .dev-logo img {
+      transform: scale(1.2);
+    }
+
+    .overlay {
+      position: absolute;
+      z-index: 5;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 1rem;
+      background-image: linear-gradient(
+        to top,
+        rgba(#000, 0.7),
+        rgba(#000, 0.6),
+        transparent
+      );
+      pointer-events: none;
+
+      h4.project-title {
+        position: relative;
+        color: #fff;
+        text-transform: capitalize;
+        font-size: 1.1rem;
+        font-weight: normal;
+      }
+
+      h6.project-subtitle {
+        color: #f3f3f3;
+        font-weight: 300;
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+      }
+
+      .price {
+        font-weight: 300;
+        color: #fff;
+
+        strong {
+          font-size: 1.1rem;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

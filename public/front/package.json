@@ -1,0 +1,19 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss:css --style=compressed --no-source-map",
+    "prefix": "postcss ./css/*.css --use autoprefixer -d ./css"
+  },
+  "keywords": [],
+  "author": "Mohamed elsayed <mohamedelsayedhussein0@gmail.com> (https://github.com/mohamedelsayedhussein)",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.3.11",
+    "postcss-cli": "^9.0.2",
+    "sass": "^1.43.4"
+  }
+}

@@ -1,0 +1,152 @@
+@use "../abstracts" as *;
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+
+// background: linear-gradient(90deg, #909196 0%, #e1e3e3 50%, #8f9094 100%);
+// background: linear-gradient(
+//   90deg,
+//   #e8c166 0%,
+//   #9c7138 25%,
+//   #d8af5c 35.01%,
+//   #f1eeb0 50.01%,
+//   #d8af5c 65.01%,
+//   #9c7138 81.43%,
+//   #e8c166 100.01%
+// );
+
+html {
+  --blue-clr-100: #00aeef;
+  --blue-clr-400: #004274;
+
+  --accent-clr-300: #1ea499;
+  --accent-clr-400: #189a90;
+
+  --secondary-clr: #e8c064;
+  --secondary-clr-50: #f1c489;
+  --secondary-clr-100: #e1b85f;
+  --secondary-clr-200: #ce9449;
+  --secondary-clr-300: #b98744;
+  --secondary-clr-400: #9c7138;
+
+  --gray-clr-50: #f7f8f9;
+  --gray-clr-100: #e9e9e9;
+  --gray-clr-400: #323031;
+
+  --border-clr: #d9d9d9;
+
+  --radius: 5px;
+  --bezier: cubic-bezier(0.77, 0, 0.175, 1);
+
+  --shadow: -2rem 0 3rem -3rem var(--gray-clr-400);
+
+  --title-font: "Nunito Sans", cursive;
+}
+
+body {
+  text-align: start;
+  font-family: "Rubik", sans-serif;
+  background-color: var(--gray-clr-50);
+  color: var(--blue-clr-400);
+  -webkit-font-smoothing: antialiased;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+iframe {
+  border: none;
+}
+
+img {
+  position: relative;
+  display: inline-block;
+
+  &::before,
+  &::after {
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    top: 0;
+    inset-inline-start: 0;
+    color: #c50808;
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+
+  &::before {
+    content: "\f030";
+    z-index: 2;
+    font-family: "Font Awesome 6 Free";
+  }
+
+  &::after {
+    content: "" attr(alt) " Not Found";
+    z-index: 1;
+    padding-inline-start: 20px;
+    font-size: 0.8rem;
+    border: dashed 1px #888;
+    background-color: #f0f0f0;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+a,
+button {
+  color: inherit;
+
+  @media (hover: hover) {
+    &:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+}
+
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  font-family: var(--title-font);
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}

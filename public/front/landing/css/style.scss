@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Changa', sans-serif;
+    direction  : rtl;
+    text-align : right;
+    overflow-x : hidden;
+}
+
+:root {
+    --blue-color: #1e4168;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+ul,
+ol,
+li {
+    padding        : 0;
+    margin         : 0;
+    list-style-type: none;
+}
+
+textarea {
+    resize: none;
+}
+
+.cta-btn {  
+    display         : inline-block;
+    padding         : 12px 1rem;
+    border-radius   : 5px;
+    background-color: var(--blue-color);
+    text-align      : center;
+    font-size       : 1rem;
+    border          : none;
+    color           : #fff !important;
+}
+
+.icons-holder {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 16;
+    background-color:rgba(#000, .3);
+    backdrop-filter: blur(5px);
+    padding: 10px;
+  
+    @media (min-width: 768px) {
+      bottom: 17%;
+      right: 2%;
+      left: auto;
+      width: auto;
+      background-color: transparent;
+      padding: 0;
+    }
+  
+    ul {
+      display: flex;
+      gap: 5px;
+  
+      @media (min-width: 768px) {
+        gap: 10px;
+        flex-direction: column;
+      }
+    }
+  
+    li {
+      color: #fff;
+      flex: 1;
+  
+      &.messenger a {
+        background-color: #0084ff;
+      }
+  
+      &.whatsapp {
+        @media (max-width: 767px) {
+          color: #222;
+        }
+  
+        a {
+          background-color: #25d366;
+        }
+      }
+  
+      &.phone a{  
+        background-color: var(--blue-color);
+      }
+  
+      a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          color: inherit;
+        font-size: 14px;
+        padding: 5px;
+  
+        @media (min-width: 768px) {
+          font-size: 1.2rem;
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          padding: 0;
+        }
+  
+        span {
+          font-size: 12px;
+          font-weight: 600;
+          margin-left: 5px;
+          text-transform: capitalize;
+  
+          @media (min-width: 768px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  
+main.main-content {
+    padding          : 20px 0;
+    width            : 100vw;
+    min-height       : 100vh;
+    color            : #fff;
+    background-image : url('../img/bg.jpg');
+    background-size  : cover;
+    background-repeat: no-repeat;
+
+    header.main-header {
+        margin-bottom: 1rem;
+
+        .logo {
+            width           : 250px;
+            overflow        : hidden;
+            margin          : auto;
+
+            img {
+                width     : 100%;
+                height    : auto;
+                object-fit: contain;
+            }
+        }
+    }
+
+    .content-wrapper {
+        padding         : 20px;
+        background-color: rgba(#000, .5);
+        backdrop-filter : blur(7px);
+
+        form.contact-form {
+            accent-color: var(--blue-color);
+            border      : 1px solid rgba(#fff, .3);
+
+            .form-control {
+                border-color    : transparent !important;
+                background-color: rgba(#000, .3);
+                backdrop-filter : blur(5px);
+                box-shadow      : none;
+                color           : #fff;
+
+                &::placeholder {
+                    color: #8f8f8f;
+                }
+
+                &:focus {
+                    border-color: #ccc !important;
+                    border-width: 1.5px;
+                }
+            }
+
+            label.check-label {
+                display      : inline-block;
+                padding-right: 5px;
+                cursor       : pointer;
+            }
+        }
+
+        footer.main-footer {
+            padding-top: 20px;
+            margin-top : 20px;
+            border-top : 1px solid rgba(#fff, .3);
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+}
+
+.iti--allow-dropdown {
+    width: 100%;
+
+    .iti__flag-container {
+        direction: ltr;
+        color    : #000;
+
+        .iti__country-list {
+            max-width: 220px;
+        }
+    }
+}

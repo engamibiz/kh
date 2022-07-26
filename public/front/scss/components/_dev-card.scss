@@ -1,0 +1,40 @@
+@use "../abstracts" as *;
+
+.dev-holder {
+  .dev-img {
+    display: block;
+    border: 1px solid var(--border-clr);
+    border-radius: var(--radius) var(--radius) 0 0;
+    box-shadow: var(--shadow);
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: auto;
+      object-fit: contain;
+      filter: grayscale(1);
+      transition: 0.2s;
+    }
+  }
+
+  &:hover .dev-img img {
+    filter: grayscale(0);
+  }
+  &:hover .dev-name {
+    color: var(--accent-clr-400);
+  }
+  .dev-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+    border: 1px solid var(--border-clr);
+    border-radius: 0 0 var(--radius) var(--radius);
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 2px;
+    padding: 5px;
+    transition: 0.2s;
+  }
+}

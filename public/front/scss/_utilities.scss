@@ -1,0 +1,86 @@
+@use "./abstracts" as *;
+
+i.fa-phone-alt {
+  [dir="rtl"] & {
+    transform: rotate(-95deg);
+  }
+}
+
+// Hide magnific popup counter
+.mfp-counter {
+  display: none;
+}
+
+.padding-block {
+  padding-block: 3rem;
+}
+
+.container-fluid {
+  width: min(92%, 80rem);
+  padding-inline: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+
+  .devs-page & {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 30px;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--accent-clr-400);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+  background-color: rgba(0, 174, 255, 0.65);
+  box-shadow: 0 5px 20px rgba(#000, 0.3);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 2;
+
+  &::after {
+    font-size: 1.2rem;
+  }
+}
+
+// CUSTOMIZE COL PADDING OF BOOTSTRAP
+
+.row.no-gutters {
+  margin: 0;
+  margin-inline: -1px;
+
+  [class*="col-"] {
+    padding: 0;
+    padding-inline: 1px;
+  }
+}
+
+.custom-control-label {
+  cursor: pointer;
+  user-select: none;
+  &::before {
+    transition: none;
+  }
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  border-color: var(--accent-clr-400);
+  background-color: var(--accent-clr-400);
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: none;
+  border-color: #adb5bd !important;
+}
+
+.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+  background-color: var(--accent-clr-400);
+  border-color: var(--accent-clr-400);
+}

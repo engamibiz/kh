@@ -1,0 +1,110 @@
+@use "../abstracts" as *;
+
+.unit {
+  position: relative;
+  box-shadow: var(--shadow);
+
+  &__img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 3;
+      inset: 0;
+      background-color: rgba(#1d293e, 0.2);
+      pointer-events: none;
+      transition: 0.7s ease;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .unit-labels {
+    position: absolute;
+    z-index: 5;
+    top: 1rem;
+    inset-inline: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span.unit-label {
+      font-family: var(--title-font);
+      font-size: 11px;
+      font-weight: 300;
+      padding: 2px 5px;
+      text-transform: capitalize;
+      border-radius: 2px;
+      box-shadow: 0 0 5px 0 rgb(0 0 0 / 10%);
+      color: #fff;
+
+      &.unit-status {
+        background-color: #ea723d;
+      }
+      &.unit-offer {
+        background-color: #7e61e1;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    padding: 1rem;
+    background-color: #fff;
+
+    h5.title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-transform: capitalize;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 10px;
+
+      &:hover {
+        color: var(--blue-clr-100);
+      }
+    }
+
+    .facilities {
+      @include flex(row);
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1rem;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(#686868, 0.1);
+
+      li {
+        flex-shrink: 0;
+        font-size: 11px;
+        font-weight: 300;
+        color: #969696;
+
+        svg {
+          display: block;
+          width: 20px;
+          margin: 0 auto 10px;
+          path {
+            fill: currentColor;
+          }
+        }
+      }
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover .unit__img::after {
+      opacity: 0;
+    }
+  }
+}
